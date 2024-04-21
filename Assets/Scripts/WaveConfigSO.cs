@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Android;
 
 [CreateAssetMenu(menuName = "Wave Config", fileName = "New Wave Config")]
 public class WaveConfigSO : ScriptableObject
@@ -9,6 +8,9 @@ public class WaveConfigSO : ScriptableObject
     [SerializeField] List<GameObject> enemyPrefabs;
     [SerializeField] Transform pathPrefab;
     [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float timeBetweenEnemySpawns = 1f;
+    [SerializeField] float spawnTimeVariance = 0f;
+    [SerializeField] float minimumSpawnTime = 0.2f;
 
     public Transform GetStartingWaypoint()
     {
@@ -40,4 +42,10 @@ public class WaveConfigSO : ScriptableObject
         return enemyPrefabs[index];
     }
 
+    public float GetRandomSpawnTime()
+    {
+        float spawnTime = Random.Range(timeBetweenEnemySpawns - spawnTimeVariance,
+                                        timeBetweenEnemySpawns + spawnTimeVariance); 
+        return Mathf.Clamp(spawnTime, minimumSpawnTime, spawnTime);
+    }
 }
