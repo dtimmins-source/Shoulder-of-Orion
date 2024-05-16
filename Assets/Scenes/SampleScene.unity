@@ -154,9 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingClip: {fileID: 8300000, guid: 05a6531a1a640ac4eb4d7370337e64c2, type: 3}
-  shootingVolume: 0.4
+  shootingVolume: 0.179
   damageClip: {fileID: 8300000, guid: 3095c600cc15c7641aa1e5fd5b3aff99, type: 3}
-  damageVolume: 0.4
+  damageVolume: 0.179
 --- !u!4 &181930266
 Transform:
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fd9965756d0e1b94daaa8d968591795c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.18
+  m_Volume: 0.066
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -563,6 +563,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &808423489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808423491}
+  - component: {fileID: 808423490}
+  m_Layer: 0
+  m_Name: ScoreKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &808423490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808423489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7ab2d08e756c24b8c68126b2ff51dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &808423491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808423489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457266590
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +661,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2867530363706014516, guid: 0d284b943891c934194f61e97cf82f66, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872554277100322359, guid: 0d284b943891c934194f61e97cf82f66, type: 3}
+      propertyPath: score
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872554277100322359, guid: 0d284b943891c934194f61e97cf82f66, type: 3}
+      propertyPath: isPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8623035139334425732, guid: 0d284b943891c934194f61e97cf82f66, type: 3}
