@@ -1049,6 +1049,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1057382393285173716, guid: 0d284b943891c934194f61e97cf82f66, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1057382393285173716, guid: 0d284b943891c934194f61e97cf82f66, type: 3}
+      propertyPath: paddingTop
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 757827544051394021, guid: 0d284b943891c934194f61e97cf82f66, type: 3}
       propertyPath: m_Enabled
       value: 1
